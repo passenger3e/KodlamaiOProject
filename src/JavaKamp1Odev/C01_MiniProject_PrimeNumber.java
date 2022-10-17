@@ -4,20 +4,27 @@ public class C01_MiniProject_PrimeNumber {
     public static void main(String[] args) {
         //write a code if the number is prime number
         //Firs Approach*******************************************************
-        int number=409;
+        int number=1;
         int remainder=0;
         boolean remainderCatch=false;
         System.out.println("*********First Approach*********");
-
-        for(int i=2;i<=number/2;i++){
+        if(number==2||number==3){
+            System.out.println("Number is prime");
+        }else if(number==1){
+            System.out.println("1 is not prime");
+        }
+        for(int i=2;i<=number/2;i++){ /* in this first approach, for the number 1,2 and 3 loop won't work
+        so these number should be checked additionally before this loop*/
             remainder=number%i;
-            //System.out.println(number/2);
-            if(remainder==0 & !remainderCatch){
-                System.out.println("Given number is not a prime number and is at least divisible by: "+i);
+            if((remainder==0 & !remainderCatch)){
+                    System.out.println("Number is not  prime  and is at least divisible by: " + i);
+
                 remainderCatch=true;
 
             }else if(remainder!=0 & i==number/2){
-                System.out.println("Given number is a prime number");
+                System.out.println("Number is prime");
+            }else{
+                System.out.println("Number is not prime");
             }
 
         }
@@ -33,8 +40,10 @@ public class C01_MiniProject_PrimeNumber {
 
         }
 
-        if(isPrime){
-            System.out.println("number is a prime number");
+        if(isPrime & number>=2){
+            System.out.println("Number is prime");
+        }else{
+            System.out.println("Number is not prime");
         }
 
         //Best Approach*******************************************************
@@ -45,8 +54,10 @@ public class C01_MiniProject_PrimeNumber {
             isPrime=false;
         }
         }
-        if(isPrime) {
-            System.out.println("number is prime");
+        if(isPrime & number>=2) {
+            System.out.println("Number is prime");
+        }else{
+            System.out.println("Number is not prime");
         }
     }
 }
