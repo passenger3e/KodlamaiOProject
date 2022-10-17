@@ -2,7 +2,7 @@ package JavaKamp1Odev;
 
 public class C01_MiniProject_PrimeNumber {
     public static void main(String[] args) {
-        //write a code if the number is prime number
+        //write a code to check the number is prime number
         //Firs Approach*******************************************************
         int number=1;
         int remainder=0;
